@@ -1,6 +1,6 @@
 import React from "react"
 import {Link} from "react-router-dom"
-import {styleCard} from "./styleCard.css"
+import "./styleCard.css"
 
 export const Card = ({name, img, id }) => {
 

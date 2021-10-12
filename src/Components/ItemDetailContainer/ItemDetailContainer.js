@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import {useParams} from "react-router"
 import { ItemContext } from "../../context/ItemContext";
-import { ItemCount } from "../ItemCount/ItemCount";
+import { ItemCount } from "../ItemListContainer/ItemCount";
 import { getElementById } from "../Utils/getElementById";
 
 export const ItemDetail = () => {

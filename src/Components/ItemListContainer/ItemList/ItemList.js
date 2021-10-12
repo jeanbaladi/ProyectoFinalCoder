@@ -1,8 +1,8 @@
 import React from "react";
-import { data } from "../../data/data";
-import { Card } from "../Card/Card";
+import { data } from "../../../data/data";
+import { Card } from "../../Card/Card";
 import {useParams} from "react-router-dom"
-import {styleItemList} from "./styleItemList.css"
+import "./styleItemList.css"
 
 
 export const ItemList = () => {
@@ -32,3 +32,4 @@ export const ItemList = () => {
         </div>
     )
 }
+export default ItemList

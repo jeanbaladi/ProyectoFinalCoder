@@ -5,9 +5,11 @@ import {
     Route
 } from "react-router-dom"
 import { Cart } from "../Cart/Cart"
-import Header from "../header/header"
-import { ItemDetail } from "../ItemDetail/ItemDetail"
-import { ItemList } from "../ItemList/ItemList"
+import Header from "../navBar/navBar"
+// import { ItemDetail } from "../ItemDetailContainer/itemDetail/ItemDetail"
+import Item from "../ItemListContainer/ItemList/item/item"
+import { ItemList } from "../ItemListContainer/ItemList/ItemList"
+import { ItemDetail } from "../ItemDetailContainer/ItemDetailContainer"
 
 export const AppRoutes = () => {
     return (
@@ -16,8 +18,8 @@ export const AppRoutes = () => {
             <Switch>
                 <Route path ="/Cart" component={Cart} />
                 <Route path ="/producto/:id" component={ItemDetail} />
-                <Route path="/" component={ItemList} exact/>
-                <Route path="/:id" component={ItemList}/>
+                <Route path="/" component={Item} exact/>
+                <Route path="/:id" component={Item}/>
             </Switch>
         </Router>
     )

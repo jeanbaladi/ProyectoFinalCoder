@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom"
 import React from "react"
-const Header = () => {
+import CarWidget from "./cartWitge/carWidget"
+const NavBar = () => {
     return (
         <nav>
             <div className="nav-wrapper">
@@ -9,9 +10,10 @@ const Header = () => {
                     <li><Link to="/1">Comida</Link></li>
                     <li><Link to="/2">Articulos</Link></li>
                     <li><Link to="/Cart">Carrito</Link></li>
+                    <li><CarWidget/></li>
                 </ul>
             </div>
         </nav>
     )
 }
-export default Header
+export default NavBar

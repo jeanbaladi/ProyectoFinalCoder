@@ -1,0 +1,5 @@
+.flexi {
+    display: flex;
+    align-items: center;
+    height: 65px;
+}
