@@ -1,0 +1,35 @@
+[33mcommit 85e09406c9a98e0fa800bc812585b0c97deb0ce5[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Jean Paul Baladi <yanbaladi159@gmail.com>
+Date:   Tue Sep 21 12:27:05 2021 -0300
+
+    add Promise
+
+[33mcommit cff2058aebca9b9f53e9c6e0ecea1276cd7f7ca0[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Jean Paul Baladi <yanbaladi159@gmail.com>
+Date:   Sat Sep 18 14:08:53 2021 -0300
+
+    add coint
+
+[33mcommit b0f5a13cf21b37ef1cfb9570b7fb37ef444a9bc6[m
+Author: Jean Paul Baladi <yanbaladi159@gmail.com>
+Date:   Wed Sep 15 15:03:35 2021 -0300
+
+    add Cards
+
+[33mcommit 9339f45eb4dc75480a1a6a584f56419773a96866[m
+Author: Jean Paul Baladi <yanbaladi159@gmail.com>
+Date:   Sun Sep 12 19:25:26 2021 -0300
+
+    add CarShop
+
+[33mcommit 430114e0d4057b9fa84bec534ccb1389ec94e64b[m
+Author: Jean Paul Baladi <yanbaladi159@gmail.com>
+Date:   Sat Sep 11 13:08:24 2021 -0300
+
+    Add-NavBar
+
+[33mcommit db0d0a1ec50b5b5403b2d95d0dc591c315c696f8[m
+Author: Jean Paul Baladi <yanbaladi159@gmail.com>
+Date:   Sat Sep 4 18:06:20 2021 -0300
+
+    first app in react
