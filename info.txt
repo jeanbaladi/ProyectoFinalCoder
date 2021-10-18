@@ -1,0 +1,6 @@
+category = id
+description = description
+image = img
+price = price
+stock = stock
+title = name

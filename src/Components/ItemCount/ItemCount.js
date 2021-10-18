@@ -10,7 +10,6 @@ export const ItemCount = ({onAdd , stock}) => {
         setButton(false)
         onAdd(contador)
     }
-
     return (
         <div>
             <button onClick={() => {contador === stock ? setContador(contador + 0) : setContador(contador + 1)}}> + </button>

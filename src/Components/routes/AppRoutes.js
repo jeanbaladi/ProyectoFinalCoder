@@ -6,9 +6,7 @@ import {
 } from "react-router-dom"
 import { Cart } from "../Cart/Cart"
 import Header from "../navBar/navBar"
-// import { ItemDetail } from "../ItemDetailContainer/itemDetail/ItemDetail"
 import Item from "../ItemListContainer/ItemList/item/item"
-import { ItemList } from "../ItemListContainer/ItemList/ItemList"
 import { ItemDetail } from "../ItemDetailContainer/ItemDetailContainer"
 
 export const AppRoutes = () => {
