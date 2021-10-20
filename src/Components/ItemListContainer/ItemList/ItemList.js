@@ -4,37 +4,42 @@ import "./styleItemList.css";
 import { firestore } from "../../../firebase";
 import {ItemListContainer} from "../itemListContainer"
 
-
 export const ItemList = () => {
     const [productos , setProductos] = useState([])
-    useEffect(() => {
-        const db = firestore
-        const coleccion = db.collection("items")
-        const consulta = coleccion.get()
-        consulta
-            .then((resultado) => {
-                let arr = []
-                resultado.docs.forEach(producto => {
-                    const finalProduct = {
-                        id : producto.id,
-                        ...producto.data()
-                    }
-                    arr.push(finalProduct)
-                    setTimeout(() => {setProductos(arr)}, 1000)
-                })
-            })
-            .catch(() => {
-                console.log("Mal")
-            })
-    }, [])
-    const parametros = useParams()
+    const {id} = useParams()     
+            useEffect(() => {
+                const db = firestore
+                const coleccion = db.collection("items")
+                // let consulta = coleccion.where("category", "==", 2) 
+                // consulta = consulta.get()
+                let consulta = coleccion.get()
+                consulta
+                    .then((resultado) => {
+                        let arr = []
+                        resultado.docs.forEach(producto => {
+                            const finalProduct = {
+                                id : producto.id,
+                                ...producto.data()
+                            }
+                            arr.push(finalProduct)
+                            setTimeout(() => {setProductos(arr)}, 1000)
+                        })
+                    })
+                    .catch(() => {
+                        console.log("Mal")
+                    })
+            }, [])
+        
+        
+        
     if (productos.length === 0) {
         return (
             <p>
                 Cargando...
             </p>
         )
-    }else if(parametros.id === "1") {
+    }
+    else if(id === "1") {
         return (
             <div className="container">
                 <div className="cards-items row">
@@ -43,7 +48,7 @@ export const ItemList = () => {
                 </div>
             </div>
         )
-    }else if(parametros.id === "2"){
+    }else if(id === "2"){
         return (
             <div className="container">
                 <div className="cards-items row">
