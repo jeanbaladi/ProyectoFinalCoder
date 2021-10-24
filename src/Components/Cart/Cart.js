@@ -1,34 +1,49 @@
-import React, {useEffect} from "react"
+import React, {useState} from "react"
 import {useContext} from "react/cjs/react.development"
 import { ItemContext } from "../../context/ItemContext"
 import { firestore } from "../../firebase"
 
 
 export const Cart = () => {
-
+    
     const {carrito , setCarrito} = useContext(ItemContext)
-    const arrEmpty = []
-    const nameArr = carrito.map(items => items[0])
-    let push = arrEmpty.push(nameArr );
-    let aa = carrito.map(items=> items.cantidad)
-    console.log(push);
+    const [name, setName] = useState('')
+    const [cell, setCell] = useState('')
+    const [email, setEmail] = useState('')
+
+    const handleText = ({target}) => {
+        setName(target.value)
+    }
+    const handleCell = ({target}) => {
+        setCell(target.value)
+    }
+    const handleEmail = ({target}) => {
+        setEmail(target.value)
+    }
+
+
+    // let aa = carrito.map(items=> items.cantidad)
     const finalPrice = [];
     const handleDelete = (id) => {
         setCarrito(carrito.filter(item => item[0].id !== id))
     }
-    useEffect(() =>{
+
+    const Aa = (e) => {
         const db = firestore
         const coleccion = db.collection("ordenes")
     
         const nueva_orden = {
             buyer : {
-                nombre: "jean",
-                telf : "2056954",
-                email: "email@email.com"
+                nombre: name,
+                telf : cell,
+                email: email
             } ,
-            items : [{nameArr }] ,
+            items : [
+                {carrito } 
+            ] ,
             // date : firestore.timestamp.now(), 
-            total : 10
+            total : carrito.length === 0 ? null : finalPrice.reduce((prev, next) => prev + next) 
+            
         }
         const consulta = coleccion.add(nueva_orden)
         consulta
@@ -38,7 +53,14 @@ export const Cart = () => {
         .catch(err => {
             console.log(err);
         })
-    }, [])
+        setTimeout(() => {
+            window.location.reload();
+        }, 3000)
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    }
 
     if (carrito.length === 0) {
         return (
@@ -61,7 +83,16 @@ export const Cart = () => {
                     )}
                 </ul>
                 <h3>total: {finalPrice.reduce((prev, next) => prev + next)}</h3>
-                <button>comprar</button>
+                <h5>Rellene los datos para confirmar compra:</h5>
+                <form onSubmit={ handleSubmit }>
+                    <label>Nombre Y Apellido:</label> 
+                    <input type="text" value={name} onChange={handleText} required />
+                    <label>Celular:</label> 
+                    <input type="number" value={cell} onChange={handleCell} required/>
+                    <label>Email</label> 
+                    <input type="email" value={email} onChange={handleEmail} required/>
+                    {name.length === 0 || cell.length === 0 || email.length === 0 ? <input type="submit" /> : <input type="submit" onClick={Aa}/>}
+                </form>
             </div> 
         )
     }
