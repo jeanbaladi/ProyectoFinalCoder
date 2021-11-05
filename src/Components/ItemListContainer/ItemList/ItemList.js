@@ -7,8 +7,26 @@ import {ItemListContainer} from "../itemListContainer"
 export const ItemList = () => {
     const [productos , setProductos] = useState([])
     const {id} = useParams()     
+    // const firebaseConfig = {
+    //     apiKey: "AIzaSyCRBMP4cdUlM_5ilvgR5G1dberEK0FZN9g",
+    //     authDomain: "react-coderhouse-53a63.firebaseapp.com",
+    //     projectId: "react-coderhouse-53a63",
+    //     storageBucket: "react-coderhouse-53a63.appspot.com",
+    //     messagingSenderId: "557071402722",
+    //     appId: "1:557071402722:web:af3c3fa2c5f467038280bb"
+    //   };
+    //   let fieJson = JSON.stringify(firebaseConfig)
+    //   var encodedString = btoa(fieJson); // Base64 encode the String
+    //   var decodedString = atob(encodedString); // Base64 decode the String
+    //   let parseJson = JSON.parse(decodedString)
+    //   console.log(parseJson);
+    //   console.log( encodedString);
+    //   console.log( decodedString);
             useEffect(() => {
-                const db = firestore
+
+
+
+                                const db = firestore
                 const coleccion = db.collection("items")
                 // let consulta = coleccion.where("category", "==", 2) 
                 // consulta = consulta.get()
