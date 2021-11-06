@@ -8,7 +8,7 @@ const App = () =>   {
 
    return (
             <div className="App">
-               <ItemContext.Provider value={{carrito, setCarrito}}>
+               <ItemContext.Provider value={[carrito, setCarrito]}>
                   <AppRoutes/>
                </ItemContext.Provider>
             </div>
