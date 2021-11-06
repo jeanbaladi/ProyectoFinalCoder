@@ -25,7 +25,7 @@ const newFirebaseConfig = {
   messagingSenderId: decodedString4,
   appId: decodedString5
 };
-console.log(newFirebaseConfig);
+
 
   const app = firebase.initializeApp(newFirebaseConfig)
 
