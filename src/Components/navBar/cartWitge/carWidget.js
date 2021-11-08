@@ -1,7 +1,6 @@
-import React from "react"
+import React, {useContext} from "react"
 import {Link} from "react-router-dom"
 import { ItemContext } from "../../../context/ItemContext"
-import {useContext} from "react/cjs/react.development"
 import "./styleCarWidget.css"
 const CarWidget = () => {
     const {carrito } = useContext(ItemContext)
