@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "@types/react-router": "^5.1.17",
     "axios": "^0.21.4",
     "cat-api": "^1.2.1",
     "firebase": "^8.9.1",
@@ -48,5 +49,9 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react-router-dom": "^5.3.2",
+    "@types/react-slick": "^0.23.7"
+  }
 }

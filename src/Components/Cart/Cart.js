@@ -21,8 +21,6 @@ export const Cart = () => {
         setEmail(target.value)
     }
 
-
-    // let aa = carrito.map(items=> items.cantidad)
     const finalPrice = [];
     const handleDelete = (id) => {
         setCarrito(carrito.filter(item => item[0].id !== id))
