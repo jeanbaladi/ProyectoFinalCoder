@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import {useContext} from "react/cjs/react.development"
+import {useContext} from "react"
 import { ItemContext } from "../../context/ItemContext"
 import { firestore } from "../../firebase"
 
